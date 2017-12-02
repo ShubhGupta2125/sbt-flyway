@@ -1,0 +1,84 @@
+[info] Flyway 4.2.0 by Boxfuse
+[info] Database: jdbc:postgresql://localhost:5432/flywayexample?user=flywayexample&password=flywayexample (PostgreSQL 9.6)
+[debug] Scanning for SQL callbacks ...
+[debug] Scanning for filesystem resources at 'src/main/resources/db/migration' (Prefix: '', Suffix: '.sql')
+[debug] Scanning for resources in path: src/main/resources/db/migration (src/main/resources/db/migration)
+[debug] Found filesystem resource: src/main/resources/db/migration/V1__create_table.sql
+[debug] Found filesystem resource: src/main/resources/db/migration/V2__add_data.sql
+[debug] Update Count: 0
+[debug] Validating migrations ...
+[debug] Update Count: 0
+[debug] Scanning for filesystem resources at 'src/main/resources/db/migration' (Prefix: 'V', Suffix: '.sql')
+[debug] Scanning for resources in path: src/main/resources/db/migration (src/main/resources/db/migration)
+[debug] Found filesystem resource: src/main/resources/db/migration/V1__create_table.sql
+[debug] Found filesystem resource: src/main/resources/db/migration/V2__add_data.sql
+[debug] Scanning for filesystem resources at 'src/main/resources/db/migration' (Prefix: 'R', Suffix: '.sql')
+[debug] Scanning for resources in path: src/main/resources/db/migration (src/main/resources/db/migration)
+[debug] Filtering out resource: src/main/resources/db/migration/V1__create_table.sql (filename: V1__create_table.sql)
+[debug] Filtering out resource: src/main/resources/db/migration/V2__add_data.sql (filename: V2__add_data.sql)
+[info] Successfully validated 2 migrations (execution time 00:00.017s)
+[debug] Update Count: 0
+[debug] Schema "public" already exists. Skipping schema creation.
+[debug] Update Count: 0
+[info] Creating Metadata table: "public"."schema_version"
+[debug] Found statement at line 17: CREATE TABLE "public"."schema_version" (
+[debug]     "installed_rank" INT NOT NULL,
+[debug]     "version" VARCHAR(50),
+[debug]     "description" VARCHAR(200) NOT NULL,
+[debug]     "type" VARCHAR(20) NOT NULL,
+[debug]     "script" VARCHAR(1000) NOT NULL,
+[debug]     "checksum" INTEGER,
+[debug]     "installed_by" VARCHAR(100) NOT NULL,
+[debug]     "installed_on" TIMESTAMP NOT NULL DEFAULT now(),
+[debug]     "execution_time" INTEGER NOT NULL,
+[debug]     "success" BOOLEAN NOT NULL
+[debug] )
+[debug] Found statement at line 29: ALTER TABLE "public"."schema_version" ADD CONSTRAINT "schema_version_pk" PRIMARY KEY ("installed_rank")
+[debug] Found statement at line 31: CREATE INDEX "schema_version_s_idx" ON "public"."schema_version" ("success")
+[debug] Executing SQL: CREATE TABLE "public"."schema_version" (
+[debug]     "installed_rank" INT NOT NULL,
+[debug]     "version" VARCHAR(50),
+[debug]     "description" VARCHAR(200) NOT NULL,
+[debug]     "type" VARCHAR(20) NOT NULL,
+[debug]     "script" VARCHAR(1000) NOT NULL,
+[debug]     "checksum" INTEGER,
+[debug]     "installed_by" VARCHAR(100) NOT NULL,
+[debug]     "installed_on" TIMESTAMP NOT NULL DEFAULT now(),
+[debug]     "execution_time" INTEGER NOT NULL,
+[debug]     "success" BOOLEAN NOT NULL
+[debug] )
+[debug] Update Count: 0
+[debug] Executing SQL: ALTER TABLE "public"."schema_version" ADD CONSTRAINT "schema_version_pk" PRIMARY KEY ("installed_rank")
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE INDEX "schema_version_s_idx" ON "public"."schema_version" ("success")
+[debug] Update Count: 0
+[debug] Metadata table "public"."schema_version" created.
+[info] Current version of schema "public": << Empty Schema >>
+[debug] Found statement at line 1: CREATE TABLE users
+[debug] (
+[debug]   id bigserial NOT NULL,
+[debug]   username character varying,
+[debug]   CONSTRAINT pk PRIMARY KEY (id)
+[debug] )
+[info] Migrating schema "public" to version 1 - create table
+[debug] Update Count: 0
+[debug] Executing SQL: CREATE TABLE users
+[debug] (
+[debug]   id bigserial NOT NULL,
+[debug]   username character varying,
+[debug]   CONSTRAINT pk PRIMARY KEY (id)
+[debug] )
+[debug] Update Count: 0
+[debug] Successfully completed migration of schema "public" to version 1 - create table
+[debug] Update Count: 0
+[debug] MetaData table "public"."schema_version" successfully updated to reflect changes
+[debug] Found statement at line 1: INSERT INTO users(username) VALUES ('john'), ('mary')
+[info] Migrating schema "public" to version 2 - add data
+[debug] Update Count: 0
+[debug] Executing SQL: INSERT INTO users(username) VALUES ('john'), ('mary')
+[debug] Update Count: 2
+[debug] Successfully completed migration of schema "public" to version 2 - add data
+[debug] Update Count: 0
+[debug] MetaData table "public"."schema_version" successfully updated to reflect changes
+[info] Successfully applied 2 migrations to schema "public" (execution time 00:00.325s).
+[debug] Update Count: 0

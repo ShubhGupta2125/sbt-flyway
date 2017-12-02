@@ -1,0 +1,5 @@
+[debug] Copy resource mappings: 
+[debug] 	(/home/shubh/Desktop/test_db_migrations/src/main/resources/db,/home/shubh/Desktop/test_db_migrations/target/scala-2.10/classes/db)
+[debug] 	(/home/shubh/Desktop/test_db_migrations/src/main/resources/db/migration,/home/shubh/Desktop/test_db_migrations/target/scala-2.10/classes/db/migration)
+[debug] 	(/home/shubh/Desktop/test_db_migrations/src/main/resources/db/migration/V1__create_table.sql,/home/shubh/Desktop/test_db_migrations/target/scala-2.10/classes/db/migration/V1__create_table.sql)
+[debug] 	(/home/shubh/Desktop/test_db_migrations/src/main/resources/db/migration/V2__add_data.sql,/home/shubh/Desktop/test_db_migrations/target/scala-2.10/classes/db/migration/V2__add_data.sql)

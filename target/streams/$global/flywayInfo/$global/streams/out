@@ -1,0 +1,22 @@
+[info] Database: jdbc:postgresql://localhost:5432/flywayexample?user=flywayexample&password=flywayexample (PostgreSQL 9.6)
+[debug] Scanning for SQL callbacks ...
+[debug] Scanning for filesystem resources at 'src/main/resources/db/migration' (Prefix: '', Suffix: '.sql')
+[debug] Scanning for resources in path: src/main/resources/db/migration (src/main/resources/db/migration)
+[debug] Found filesystem resource: src/main/resources/db/migration/V1__create_table.sql
+[debug] Found filesystem resource: src/main/resources/db/migration/V2__add_data.sql
+[debug] Update Count: 0
+[debug] Scanning for filesystem resources at 'src/main/resources/db/migration' (Prefix: 'V', Suffix: '.sql')
+[debug] Scanning for resources in path: src/main/resources/db/migration (src/main/resources/db/migration)
+[debug] Found filesystem resource: src/main/resources/db/migration/V1__create_table.sql
+[debug] Found filesystem resource: src/main/resources/db/migration/V2__add_data.sql
+[debug] Scanning for filesystem resources at 'src/main/resources/db/migration' (Prefix: 'R', Suffix: '.sql')
+[debug] Scanning for resources in path: src/main/resources/db/migration (src/main/resources/db/migration)
+[debug] Filtering out resource: src/main/resources/db/migration/V1__create_table.sql (filename: V1__create_table.sql)
+[debug] Filtering out resource: src/main/resources/db/migration/V2__add_data.sql (filename: V2__add_data.sql)
+[debug] Update Count: 0
+[info] +---------+--------------+---------------------+---------+
+[info] | Version | Description  | Installed on        | State   |
+[info] +---------+--------------+---------------------+---------+
+[info] | 1       | create table | 2017-12-02 20:42:36 | Success |
+[info] | 2       | add data     | 2017-12-02 20:42:36 | Success |
+[info] +---------+--------------+---------------------+---------+
